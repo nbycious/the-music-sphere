@@ -1,0 +1,29 @@
+<app-nav-bar></app-nav-bar>
+<section class="text-gray-600 body-font overflow-hidden" *ngIf="vinilo">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="lg:w-4/5 mx-auto flex flex-wrap">
+        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" [src]="vinilo.ImagenPortada"><!--FOTO DE PORTADA-->
+        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+          <h2 class="text-sm title-font text-gray-500 tracking-widest">{{ vinilo.Genero }}</h2>
+          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{ vinilo.Titulo }}</h1>
+          <h1 class="text-gray-900 text-2xl title-font font-medium mb-1">{{ vinilo.Artista }}</h1>
+         
+       
+          
+          <div class="fleX">
+            <span class="title-font font-medium text-2xl text-gray-900">{{ vinilo.Precio | currency }}</span>
+
+            <button (click)="addToCart()"class="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded">Añadir a Carrito</button>
+           
+            <p><strong>Lista de canciones:</strong></p>
+          <ul>
+            <li *ngFor="let cancion of vinilo.ListaCanciones">{{ cancion }}</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </section>
+
+  

@@ -1,0 +1,58 @@
+
+<app-nav-bar></app-nav-bar>
+<div style="margin-left: 80px; margin-top: 20px;font-size: larger;" *ngIf="credencial?.Nombre">
+  <h1>Bienvenido(a), {{ credencial?.Nombre }}</h1> 
+</div>
+<app-carrusel></app-carrusel>
+<!--Sección de productos-->
+<div class="container px-5 py-24 mx-auto">
+  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Un poco de todo</h1>
+  <div class="flex flex-wrap -m-4">
+    
+    <!-- Mostrar productos de CDs -->
+    <div *ngFor="let cd of (cds$ | async)" class="lg:w-1/4 md:w-1/2 p-4 w-full">
+      <a [routerLink]="['/detalle', cd.DiscoId]"class="block relative h-48 rounded overflow-hidden" style="cursor: pointer;">
+        <img alt="ecommerce" class="object-cover object-center w-full h-full block" [src]="cd.ImagenPortada">
+      </a>
+      <div class="mt-4">
+        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{{ cd.Genero }}</h3>
+        <h2 class="text-gray-900 title-font text-lg font-medium">{{ cd.Titulo }}</h2>
+        <h2 class="text-gray-700 title-font text-md font-ds">{{ cd.Artista }}</h2>
+        <p class="mt-1">{{ cd.Precio | currency }}</p>
+      </div>
+    </div>
+
+    <!-- Mostrar productos de Vinilos -->
+    <div *ngFor="let vinilo of (vinilos$ | async)" class="lg:w-1/4 md:w-1/2 p-4 w-full">
+      <a (click)="viewDetails(vinilo.DiscoId)" class="block relative h-48 rounded overflow-hidden"style="cursor: pointer;" >
+        <img alt="ecommerce" class="object-cover object-center w-full h-full block" [src]="vinilo.ImagenPortada">
+      </a>
+      <div class="mt-4">
+        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{{ vinilo.Genero }}</h3>
+        <h2 class="text-gray-900 title-font text-lg font-medium">{{ vinilo.Titulo }}</h2>
+        <h2 class="text-gray-700 title-font text-md font-ds">{{ vinilo.Artista }}</h2>
+        <p class="mt-1">{{ vinilo.Precio | currency }}</p>
+      </div>
+    </div>
+
+    <!-- Mostrar productos de Merch -->
+    <div *ngFor="let merch of (merch$ | async)" class="lg:w-1/4 md:w-1/2 p-4 w-full">
+      <a [routerLink]="['/detallemerch', merch.MercanciaId]" class="block relative h-48 rounded overflow-hidden" style="cursor: pointer;">
+        <img alt="ecommerce" class="object-cover object-center w-full h-full block" [src]="merch.Imagen">
+      </a>
+      <div class="mt-4">
+        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{{ merch.Artista }}</h3>
+        <h2 class="text-gray-900 title-font text-lg font-medium">{{ merch.Tipo}}</h2>
+        <p class="mt-1">{{ merch.Precio | currency }}</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+  <app-footer></app-footer>
+  
+  
+
+
+

@@ -1,0 +1,189 @@
+  /*
+  background-image: url('https://wallpapergod.com/images/hd/purple-aesthetic-1920X1080-wallpaper-0ouvuc9b823f4rxb.jpeg');  Este esel del camino de noche
+  background-image: url('https://images7.alphacoders.com/134/1342751.png'); este es el del lago morado
+  background-image: url('https://wallpapergod.com/images/hd/purple-aesthetic-2560X1440-wallpaper-qr7kc769c5phsbfg.jpeg'); es la de la rueda de la fortuna
+  */
+
+
+
+header{
+  width: 100%;
+  height: 80px;
+  background:#11101b ;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  position: -webkit-sticky; /* Para soporte en navegadores basados en Webkit */
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+}
+.logo{ /*TEMPORAL, AQUI IRA EL LOGO DE A DEVIS YA CUANDO LO TENGAMOS*/
+  font-size: 30px;
+  font-weight: bold;
+  color: #fefefe;
+}
+.hamburger{
+  display: none;
+}
+.nav-bar ul{
+  display: flex;
+}
+.nav-bar ul li a{
+  display: block;
+  color: #fefefe;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+.nav-bar ul li a:hover{
+  color: #11101b;
+  background-color: #fefefe;
+}
+.nav-bar ul li a.active{
+  color:#11101b;
+  background: #fefefe;
+}
+@media only screen and (max-width:1320px){
+  header{
+      padding: 0 50px;
+  }
+}
+@media only screen and (max-width:1100px){
+  header{
+      padding: 0 30px;
+  }
+}
+@media only screen and (max-width:900px){
+  .hamburger{
+      display: block;
+      cursor:pointer;
+  }
+  .hamburger .line{
+      width: 30px;
+      height:3px;
+      background-color: #fefefe;
+      margin: 6px 0;
+      
+  }
+  .nav-bar{
+      height: 450px;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #11101b;
+      transition: 0.5s;
+      overflow: hidden;
+  }
+  .nav-bar.active{
+      height: 450px;
+  }
+
+  .nav-bar ul{
+      display:block;
+      width: fit-content;
+      margin: 80px auto 0 auto;
+      text-align: center;
+      transition: 0.5s;
+      opacity: 0;
+  }
+  .nav
+  .nav-bar.active ul{
+      opacity: 1;
+  }
+  .nav-bar ul li a{
+      margin-bottom: 12px;
+  }
+}
+* {
+  
+  list-style: none;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+
+
+.full-pagina {
+  background-image: url('https://wallpapercave.com/wp/wp5935528.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+}
+
+  h1, h4, h5 {
+    color: rgb(255, 255, 255); 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
+  app-nav-bar {
+    background-color: #82006c; 
+    border-bottom: 2px solid #ff00b3; 
+  }
+  
+  .card {
+    background-color: #505050; 
+    border: 1px solid #ff00b3; 
+  }
+  
+  .card-header {
+    background-color: #4B0082; 
+    color: #fff; 
+    border-bottom: 1px solid #ff00b3; 
+  }
+  
+  .card-body {
+    background-color: #505050; 
+  }
+
+  .btn-primary {
+    background-color: #9932CC; 
+    border: 1px solid #9932CC; 
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff00b3; 
+  }
+  
+  .btn-danger {
+    background-color: #9932CC; 
+    border: 1px solid #9932CC; 
+  }
+  
+  .btn-danger:hover {
+    background-color: #FF69B4; 
+  }
+  
+  .alert-info {
+    background-color: #4B0082; 
+    color: #fff; 
+    border: 1px solid #fff; 
+  }
+  
+  .img-fluid {
+    border: 1px solid #ff00b3; 
+  }
+  
+  .mb-4, .mb-3, .mt-5, .mt-3 {
+    margin-bottom: 1.5rem; 
+    margin-top: 1.5rem;
+  }
+  
+  .btn-block {
+    display: block;
+    width: 100%;
+  }

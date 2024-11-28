@@ -1,0 +1,88 @@
+/*
+  background-image: url('https://wallpapergod.com/images/hd/purple-aesthetic-1920X1080-wallpaper-0ouvuc9b823f4rxb.jpeg');  Este esel del camino de noche
+  background-image: url('https://images7.alphacoders.com/134/1342751.png'); este es el del lago morado
+  background-image: url('https://wallpapergod.com/images/hd/purple-aesthetic-2560X1440-wallpaper-qr7kc769c5phsbfg.jpeg'); es la de la rueda de la fortuna
+  --------------------------------------------------------------------------------------------------------------------------------------------------------
+  background-image: url('https://images7.alphacoders.com/130/1303680.png'); ondas raras
+  background-image: url('https://i.pinimg.com/564x/8b/e0/55/8be0556712b6f623f3b6930b3642dcc0.jpg'); craneos
+  background-image: url('https://wallpaperset.com/w/full/1/6/c/509104.jpg'); no me acuerdo xd
+  background-image: url('https://wallpapers.com/images/featured/purple-aesthetic-pictures-ioe10ldym1bxxoin.jpg');  ciudad neon
+  background-image: url('https://images.hdqwalls.com/download/last-dreamy-night-4k-79-1920x1080.jpg'); 
+  
+  min-width: 240vh;
+*/
+
+body {
+  background-image: url('https://i.pinimg.com/736x/94/60/81/946081f1cc254903186ea6bedd9e3810.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: #fff; 
+}
+
+h3 {
+  color: #fff; 
+}
+
+.container.login-container {
+  
+  background-color: hsla(0, 0%, 0%, 0); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  min-height: 100vh; 
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #333; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-form .form-group label {
+  color: #c4c4c4; 
+}
+
+.login-form .form-control {
+  background-color: #9f7ccb; 
+  border: 1px solid #4B0082; 
+  color: #f6f6f6; 
+}
+
+.login-form .form-control:focus {
+  background-color: #755c94; 
+  border-color: #9932CC; 
+}
+
+.btn-primary {
+  background-color: #4B0082; 
+  border: none; 
+}
+
+.btn-primary:hover {
+  background-color: #9932CC; 
+}
+
+.text-center a {
+  color: #9f7ccb; 
+}
+
+.text-center a:hover {
+  color: #FF69B4; 
+}  

@@ -1,0 +1,24 @@
+<app-nav-bar></app-nav-bar>
+
+<!--Sección de productos-->
+
+<section class="text-gray-600 body-font" style="margin-top: 80px; margin-left: 20px; margin-right: 20px;">
+<div class="container mx-auto">
+  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">CD's</h1>
+  <div class="flex flex-wrap -m-4">
+    <div *ngFor="let disco of discos" class="lg:w-1/4 md:w-2/2 p-4 w-full">
+      <a [routerLink]="['/detalle', disco.DiscoId]" class="block relative h-48 rounded overflow-hidden aspect-square" style="cursor: pointer;">
+        <img [src]="disco.ImagenPortada" alt="PORTADA" class="object-cover object-center w-full h-full block aspect-square">
+      </a>
+      <div class="mt-4">
+        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{{ disco.Genero }}</h3>
+        <h2 class="text-gray-900 title-font text-lg font-medium">{{ disco.Titulo }}</h2>
+        <h2 class="text-gray-700 title-font text-md font-ds">{{ disco.Artista }}</h2>
+        <p class="mt-1">{{ disco.Precio | currency }}</p>
+      
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<app-footer></app-footer>

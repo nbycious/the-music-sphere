@@ -1,0 +1,52 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="full-pagina"> 
+  <div class="container mt-5">
+    <h1 class="mb-4">Carrito de Compra</h1>
+    <div class="row">
+      <div class="col-md-8">
+        
+        <div class="card mb-4" *ngIf="cart.length > 0; else emptyCart">
+          <div class="card-header">
+            <h4>Productos en tu carrito</h4>
+          </div>
+          <div class="card-body">
+            <div *ngFor="let producto of cart" class="row mb-3">
+              <div class="col-md-3">
+                <img [src]="producto.ImagenPortada || producto.Imagen" class="img-fluid" [alt]="producto.Titulo || producto.Artista">
+              </div>
+              <div class="col-md-3">
+                <h5>{{ producto.Titulo || producto.Tipo }}</h5>
+              </div>
+              <div class="col-md-2">
+                <h5>{{ producto.Precio | currency }}</h5>
+              </div>
+              <div class="col-md-2">
+                <button class="btn btn-danger" (click)="removeFromCart(producto)">Eliminar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ng-template #emptyCart>
+          <div class="alert alert-info" role="alert">
+            No tienes productos en tu carrito.
+          </div>
+        </ng-template>
+      </div>
+
+      <div class="col-md-4" style="margin-top: 25px;">
+        <div class="card" *ngIf="cart.length > 0">
+          <div class="card-header">
+            <h4>Resumen del Pedido</h4>
+          </div>
+          <div class="card-body">
+            <h5>Total: {{ total | currency }}</h5>
+            <button (click)="pago()"  class="btn btn-primary btn-lg btn-block mt-3">Proceder al Pago</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

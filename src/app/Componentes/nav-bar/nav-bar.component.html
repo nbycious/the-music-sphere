@@ -1,0 +1,51 @@
+    <link rel="stylesheet" src="nav-bar.component.css">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.3/dist/ionicons/ionicons.min.css">
+
+<header>
+    <div class = "logo"> 
+      <img src="https://pbs.twimg.com/media/GSBD5B1WgAAEUco?format=png&name=900x900" style="width: 250px;">
+  </div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    
+    <nav class="nav-bar">
+        <ul>
+            <li>
+                <a href="">Inicio</a>
+            </li>
+            <li>
+                <a href="CD">CDs</a>
+            </li>
+            <li>
+                <a href="Vin">Vinilos</a>
+            </li>
+            <li>
+              <a href="Merch">Merch</a>
+          </li>
+         
+                    <li *ngIf="usuarioLogueado; else loginLink">
+                        <a href="#" (click)="cerrarSesion()">
+                            Cerrar Sesión
+                        </a>
+                    </li>
+                    <ng-template #loginLink>
+                        <li><a href="Login">Iniciar sesión</a>
+
+                        </li>
+                    </ng-template>
+                <li>
+                <a  (click)="irAlCarrito()">Tu Carrito</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<script>
+    hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function(){
+        navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active")
+    }
+</script>

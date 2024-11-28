@@ -1,0 +1,73 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  background-image: url('https://wallpapers.com/images/featured/purple-aesthetic-pictures-ioe10ldym1bxxoin.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 0; 
+  max-width: 1200px; 
+  width: 100%;
+  
+}
+
+.card {
+  background-color: #1f1f1f; 
+  border: 1px solid #6a0dad; 
+  color: #ffffff; 
+  padding: 20px; 
+}
+
+.card-header {
+  background-color: #6a0dad; 
+  color: #ffffff; 
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-control {
+  background-color: #333333; 
+  border: 1px solid #6a0dad; 
+  color: #ffffff; 
+}
+
+.form-control::placeholder {
+  color: #c4a2e3; 
+}
+
+.btn-primary {
+  background-color: #6a0dad; 
+  border-color: #6a0dad; 
+  color: #ffffff; 
+}
+
+.btn-primary:hover {
+  background-color: #5a0cbf; 
+  border-color: #5a0cbf;
+}
+
+.form-group label {
+  color: #c4a2e3; 
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-header h3 {
+  margin: 0;
+}

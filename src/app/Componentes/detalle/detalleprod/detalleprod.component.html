@@ -1,0 +1,34 @@
+
+<app-nav-bar></app-nav-bar>
+<section class="text-gray-600 body-font overflow-hidden" >
+  <div class="container px-5 py-24 mx-auto">
+    <div class="lg:w-4/5 mx-auto flex flex-wrap">
+      <img [src]="disco.ImagenPortada" alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded">
+      <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+        <h2 class="text-sm title-font text-gray-500 tracking-widest">{{ disco.Genero }}</h2>
+        <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{ disco.Titulo }}</h1>
+        <h1 class="text-gray-900 text-2xl title-font font-medium mb-1">{{ disco.Artista }}</h1>
+        <p class="leading-relaxed">{{ disco.Descripcion }}</p>
+        <br>
+        <div class="flex">
+          <span class="title-font font-medium text-2xl text-gray-900">{{ disco.Precio | currency}}</span>
+          <button (click)="addToCart()" class="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded">Añadir a Carrito</button> 
+          
+          
+        </div>
+        <br>
+          <br>
+          <p><strong>Lista de canciones:</strong> </p>
+          <ul>
+            <li *ngFor="let cancion of disco.ListaCanciones">{{ cancion }}</li>
+          </ul>
+      </div>
+      
+    </div>
+   
+  </div>
+  
+ <app-footer></app-footer>
+</section>
+
+
